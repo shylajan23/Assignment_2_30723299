@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Deaths By Risk Factor, World</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Font Awesome Cdn Link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+        #map, #bar, #river, #line {
+            height: 60vh;
+            width: 80%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+
+
+            <li>
+                <a href="#" id="all_nav">
+                    <i class="fas fa-list"></i>
+                    <span class="nav-item">All Overview</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" id="map_nav">
+                    <i class="fas fa-globe"></i>
+                    <span class="nav-item">Global Overview</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="bar_nav">
+                    <i class="fas fa-flag-usa"></i>
+                    <span class="nav-item">Region Overview</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="river_nav">
+                    <i class="fas fa-industry"></i>
+                    <span class="nav-item">Global Population</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="line_nav">
+                    <i class="fas fa-calendar"></i>
+
+                    <span class="nav-item">Unhealthy Overview</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a class="logout" href="https://github.com/shylajan23/Assignment_2_30723299" target="_blank">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Source Files</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section class="main">
+        <div class="main-top">
+            <h1 id="navigate-location" style="margin-left: 10px ; font-size: 20px ; font-weight: bold">Deaths By Risk
+                Factor, World</h1>
+        </div>
+        <div id="main-content">
+            <div class="users dashboard-users">
+
+            </div>
+
+            <section class="users map_section">
+
+                <div class="card">
+                    <h5>Summary</h5>
+                    <div class="per">
+                        <p>This map showcases mortality rates from various health-related causes over different years.
+                            Users can filter by year and cause. Although China often shows the highest numbers, it's
+                            crucial to remember China's large population. These absolute figures reflect its population
+                            size, and the actual rates might be in line with or even lower than other nations.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="categoryFilters"></div>
+                    <div class="yearFilters"></div>
+                    <div id="map"></div>
+                </div>
+
+            </section>
+
+            <section class="users region_section">
+                <div class="card">
+                    <h5>Region</h5>
+                    <div class="per">
+                        <p>A "Region Death Overview" typically refers to a report or analysis that provides a concise
+                            yet comprehensive summary of the mortality or death rates within a specific geographical
+                            area, such as a city, state, or country. This overview offers valuable insights into the
+                            causes and patterns of death within the region, including details about leading causes of
+                            mortality, demographic information about the deceased, and trends over time. These insights
+                            can be crucial for public health officials, policymakers, and researchers to better
+                            understand and address health issues and improve healthcare interventions within that
+                            region. The Region Death Overview serves as a critical tool for tracking and responding to
+                            health-related challenges within a defined geographic area..</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="regionFilter"></div>
+                    <div id="bar"></div>
+                </div>
+            </section>
+
+
+            <section class="users industry_section">
+
+                <div class="card">
+                    <h5>Global Population</h5>
+                    <div class="per">
+                        <p>This chart illustrates the number of deaths worldwide attributed to various daily habits and
+                            lifestyle factors. It aims to highlight the significant impact of these habits on global
+                            mortality rates. The data is categorized into specific habits, such as smoking, poor diet,
+                            lack of physical activity, and excessive alcohol consumption. Each category is represented
+                            by a distinct color or symbol to aid in visual clarity.
+                            The chart can be further segmented by age groups, gender, or regions to provide a more
+                            detailed analysis of how daily habits affect different populations. The y-axis represents
+                            the number of deaths, while the x-axis may represent years or other relevant time periods,
+                            showing trends and changes over time..</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="river"></div>
+                </div>
+
+            </section>
+
+            <section class="users age_section">
+                <div class="card">
+                    <h5>Unhealthy Overview</h5>
+                    <div class="per">
+                        <p>This graph shows the changing causes of death from 1990 to 2019. It reveals significant
+                            increases in high blood pressure, smoking, and high fasting plasma glucose as contributors
+                            to over a hundred million annual deaths. It emphasizes the importance of addressing these
+                            factors because they may be silently taking the lives of individuals and their loved
+                            ones.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div id="line"></div>
+                </div>
+
+            </section>
+
+
+        </div>
+    </section>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js" type="module"></script>
+</html>
